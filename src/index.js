@@ -28,6 +28,8 @@ _.extend(SpellCheckProvider.prototype, {
     var textIsMisspelled = spellchecker.isMisspelled(text);
     if (textIsMisspelled) {
       this.emit('misspelling', spellchecker.getCorrectionsForMisspelling(text));
+    } else {
+      this.emit('clear');      
     }
     return !textIsMisspelled;
   }
