@@ -32,8 +32,6 @@ _.extend(SpellCheckProvider.prototype, {
       this.emit('clear');      
     }
     return !textIsMisspelled;
-  },add: function(text) {
-      spellchecker.add(text);      
   }
 });
 
