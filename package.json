@@ -3,8 +3,14 @@
   "version": "v1.0.0-3",
   "description": "Because Electron's spell-check APIs are just a little too low-level.",
   "main": "src/index.js",
+  "files": [
+    "index,js",
+    "en_gb.aff",
+    "wordlist.js"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "copy-en_gb-aff": "cp -f ./src/en_gb.aff  ./node_modules/dictionary-en-gb/index.aff",
+    "test": "npm run copy-en_gb-aff && ./node_modules/mocha/bin/mocha --timeout 35000 -- './src/test/*' --recursive"
   },
   "repository": {
     "type": "git",
@@ -24,7 +30,11 @@
   },
   "homepage": "https://github.com/mixmaxhq/electron-spell-check-provider#readme",
   "dependencies": {
-    "spellchecker": "^3.2.1",
+    "nspell": "1.0.0",
+    "dictionary-en-gb": "1.2.0",
     "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0"
   }
 }
