@@ -3,11 +3,6 @@
   "version": "v1.0.0-5",
   "description": "Because Electron's spell-check APIs are just a little too low-level.",
   "main": "src/index.js",
-  "files": [
-    "index,js",
-    "en_gb.aff",
-    "wordlist.js"
-  ],
   "scripts": {
     "copy-en_gb-aff": "cp -f ./src/en_gb.aff  ./node_modules/dictionary-en-gb/index.aff",
     "test": "npm run copy-en_gb-aff && ./node_modules/mocha/bin/mocha --timeout 35000 -- './src/test/*' --recursive"
