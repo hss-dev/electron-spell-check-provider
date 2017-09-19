@@ -1,6 +1,6 @@
 {
   "name": "electron-spell-check-provider",
-  "version": "v1.0.0-9",
+  "version": "v1.0.0-10",
   "description": "Because Electron's spell-check APIs are just a little too low-level.",
   "main": "src/index.js",
   "scripts": {
@@ -25,9 +25,12 @@
   },
   "homepage": "https://github.com/mixmaxhq/electron-spell-check-provider#readme",
   "dependencies": {
-    "nspell": "1.0.0",
+    "nspell": "1.0.3",
     "dictionary-en-gb": "1.2.0",
     "underscore": "^1.8.3",
     "mocha": "^3.2.0"
+  },
+  "devDependencies": {
+    "nspell": "^1.0.3"
   }
 }
