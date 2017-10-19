@@ -28,6 +28,12 @@ describe('CrossbowSpellCheckerProvider: ', function() {
 
 	xit('shouldn\'t be marking storeys as correct', function() {
 		assert.equal(false, spellchecker.correct('storeys'));
-	})
+	});
+	
+	it('should be able to handle over 50 checks', function() {
+		for (i = 0; i < 100; i++) {
+		  spellchecker.spellCheck("test" + i , undefined);	
+		}		
+	});
 
 });

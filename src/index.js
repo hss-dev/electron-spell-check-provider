@@ -67,7 +67,7 @@ _.extend(SpellCheckProvider.prototype, {
             this.emit('misspelling', suggestions);
             if (last.size > 50) {
                 // get rid of first 50....
-                const mapIter = myMap.keys();
+                const mapIter = last.keys();
                 for (let i = 0; i < 25; i++) {
                     last.delete(mapIter.next().value);
                 }
